@@ -1,8 +1,9 @@
 import { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { actions } from '..';
 
+import { useAppSelector } from 'hooks';
 import * as editor from 'core/editor';
 import * as entities from 'core/entities';
 import type { MachineryTranslation, SourceType } from 'core/api';
@@ -32,13 +33,13 @@ export default function useCopyMachineryTranslation(): (
         [dispatch],
     );
 
-    const isReadOnlyEditor = useSelector((state) =>
+    const isReadOnlyEditor = useAppSelector((state) =>
         entities.selectors.isReadOnlyEditor(state),
     );
-    const entity = useSelector((state) =>
+    const entity = useAppSelector((state) =>
         entities.selectors.getSelectedEntity(state),
     );
-    const isFluentTranslationMessage = useSelector((state) =>
+    const isFluentTranslationMessage = useAppSelector((state) =>
         editor.selectors.isFluentTranslationMessage(state),
     );
 
