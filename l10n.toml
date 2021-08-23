@@ -4,6 +4,7 @@ locales = [
     "es",
     "fr",
     "zh-CN",
+    "en-GB"
 ]
 
 [[paths]]
