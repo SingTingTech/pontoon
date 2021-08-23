@@ -3,6 +3,7 @@ basepath = "."
 locales = [
     "es",
     "fr",
+    "zh-CN",
 ]
 
 [[paths]]
